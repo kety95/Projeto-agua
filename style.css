@@ -1,0 +1,155 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --cor0:#f71204;
+    --cor1:#d9095c;
+    --cor2:#f016da;
+    --cor3:#ac09d996;
+    --cor4:#f82b7a;
+    --cor5:#850af7;
+    --cor6:#3891f767;
+    --cor7:#86bbf867;
+    --cor8:#5fb382;
+    --cor9:#0c68d1d8;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', 'cursive';
+}
+
+        *{
+            margin: 0; padding: 0; box-sizing: 0; border-box: 0;
+           
+        }
+        body{
+            background-color:var(--cor7);         
+        }
+        main{
+            background-color: white;
+            min-width: 300px;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        .curiosidades{
+            background-color: var(--cor3);
+            min-width: 300px;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 100px;
+            font-family: var(--fonte-destaque);
+            font-size: large;
+        }
+        .title{
+            background-image: linear-gradient(to right, #e63079, #2380ebd8);
+            width:20%;
+            padding:10px;
+            text-align:center;
+            color:white;
+            border-radius: 5px;
+        }
+        h2.title a{
+            text-decoration: none;
+            color:white;
+        }
+        .title3{
+            background-color:var(--cor9);
+            width:20%;
+            padding:10px;
+            text-align:center;
+            color:white;
+            border-radius: 5px;
+        }
+        h2.title3 a{
+            text-decoration: none;
+            color:white;
+        }
+        h2.title2{
+            background-image: linear-gradient(to right, #e63079, #2380ebd8);
+            width:100%;
+            padding:10px;
+            text-align:center;
+            color:white;
+        }
+        header{
+            background-image: linear-gradient(to bottom, var(--cor1), var(--cor6));
+            min-height: 150px;
+            text-align: center;
+            padding-top: 40px;
+        }
+        header > h3{
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            max-width: 500px;
+            margin: auto;
+            padding-right: 10px;
+            padding-left: 10px;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0, 0.267);
+            }
+        header > h1{
+            color: white;
+            font-family: var(--fonte-destaque);
+            margin-bottom: 20px;
+            font-size: 3em;
+            font-weight: normal;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0, 0.267);
+        }
+        nav{
+            background-color: var(--cor1);
+            padding: 10px;
+            box-shadow: 0px 7px 7px rgba(0, 0, 0, 0, 0.192);
+            text-align: center;
+            font-family: var(--fonte-padrao);
+        }
+        nav a{
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition-duration: 0.5s;
+        }
+        nav a:hover{
+            background-color: var(--cor4);
+            color: var(--cor5);
+        }
+        .carrinho-container{
+            display: flex;
+            margin-top:10px;
+        }
+        .produto{
+            width:33.3%;
+            padding: 0 30px;
+            font-family: var(--fonte-padrao);
+            margin:auto;
+        }
+        .produto img{
+            max-width: 100%;
+            border-radius: 10px; 
+        }
+        .produto img:hover{
+            max-width: 150%;
+        }
+        .produto a{
+            display: block;
+            width: 95%;
+            padding:10px;
+            color:white;
+            background-color:var(--cor6);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;  
+        }
+        .carrinho-item{
+            max-width: 1200px;
+            margin: 10px auto;
+            padding-bottom: 10px;
+
+            border-bottom: 2px dotted #ccc;
+        }
+        .carrinho-item p{
+            font-size: 16px;
+            color: gray;
+        }
+        
