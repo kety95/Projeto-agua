@@ -4,7 +4,6 @@
 ?>
 
     <main>  
-        <!-- <h2 class="title"> <a href="carrinho.php">Carrinho</a> <img src="imagens/carrinho3.png" alt=""></h2> -->
         <section>
             <p class="segunda_frase">Seja bem-vindo à sua fonte de água premium.</p>
             <div class="carrinho-container">
@@ -30,7 +29,7 @@
                 }
                 
                 ?>
-            </div> <!--carrinho-container-->
+            </div>
         </section>
 
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -50,7 +49,6 @@
                     }
 
             }
-            //include_once 'itens.php';
         ?>      
     </main>
     <?php include_once "rodape.php"; ?>

@@ -244,6 +244,13 @@ body{
     text-decoration: none;
 }
 
+.carrinho_vazio{
+    margin-left: 10%;
+    font-size: 1.6rem;
+    display: inline;
+    text-align: center;
+}
+
 /* rodape */
 
 .roda_pe{
