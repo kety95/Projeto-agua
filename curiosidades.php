@@ -8,4 +8,5 @@
     </main>
     
 </body>
+<?php include_once "rodape.php"; ?>
 </html>
