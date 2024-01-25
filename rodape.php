@@ -7,5 +7,5 @@
                <a href=""  class="icone"><img src="img/twitter.svg" alt=""></a>
                <a href=""  class="icone"><img src="img/instagram.svg" alt=""></a>
                <a href=""  class="icone"><img src="img/facebook.svg" alt=""></a>
-</span>
+        </span>
 </section>

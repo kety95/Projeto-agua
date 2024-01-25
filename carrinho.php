@@ -1,43 +1,36 @@
 <html>
 <?php include_once 'cabecalho.php'; 
-        // echo "<h2 class='title2'> Carrinho <img src='imagens/carrinho3.png' alt=''></h2>";?>
-    <main>
+?>
+    <main class="carrinho">
+    <?php
+session_start();
+
+$itens1 = array(
+    0 => ['nome' => 'Água sabor Uva', 'imagem' => 'img/uva.svg', 'preco' => 7.0],
+    1 => ['nome' => 'Água sabor Laranja', 'imagem' => 'img/laranja.svg', 'preco' => 7.0],
+    2 => ['nome' => 'Água sabor Morango', 'imagem' => 'img/morango.svg', 'preco' => 7.0],
+    3 => ['nome' => 'Água sabor com Gás', 'imagem' => 'img/gas.svg', 'preco' => 7.0],
+    4 => ['nome' => 'Água sabor Mineral', 'imagem' => 'img/mineral.svg', 'preco' => 7.0],
+    5 => ['nome' => 'Água sabor Limão', 'imagem' => 'img/limao.svg', 'preco' => 7.0]
+);
+
+foreach ($_SESSION['carrinho1'] as $key => $value) {
+    echo '<div class="carrinho-item">';
+    // Verifica se o índice existe antes de acessar o array $itens1
+    if (array_key_exists($key, $itens1)) {
+        echo '<img class="carrinho-item__imagem_produto" src="' . $itens1[$key]['imagem'] . '" alt="Imagem do produto">';
+        echo '<p class="carrinho-item__descricao">' . $value['nome'] . ', Quantidade: ' . $value['quantidade'] . ', Preço: ' . ($value['quantidade'] * $itens1[$key]['preco']) . '</p>';
+    } else {
+        echo '<p>Produto não encontrado</p>';
+    }
+    echo '</div>';
+}
+?>
         <?php
-        session_start();
-       
-
-        foreach ($_SESSION['carrinho1'] as $key => $value){
-            //nome do produto
-            //quantidade
-            //preco
-            echo '<div class="carrinho-item">';
-            echo $value['imagem'].'<p>Nome: '.$value['nome'].' | Quantidade: '.$value['quantidade'].' | preco: '.($value['quantidade']*$value['preco']).'</p>';
-            echo '</div>';
-        }
-
-        // foreach ($_SESSION['carrinho2'] as $key => $value2){
-        //     //nome do produto
-        //     //quantidade
-        //     //preco
-        //     echo '<div class="carrinho-item">';
-        //     echo '<p>Nome: '.$value2['nome'].' | Quantidade: '.$value2['quantidade'].' | preco: '.($value2['quantidade']*$value2['preco']).'</p>';
-        //     echo '</div>';
-        // }
-
-        // foreach ($_SESSION['carrinho3'] as $key => $value3){
-        //     //nome do produto
-        //     //quantidade
-        //     //preco
-        //     echo '<div class="carrinho-item">';
-        //     echo '<p>Nome: '.$value3['nome'].' | Quantidade: '.$value3['quantidade'].' | preco: '.($value3['quantidade']*$value3['preco']).'</p>';
-        //     echo '</div>';
-        // }
-        ?>
-        <?php
-        echo "<h2 class='title3'> <a href='carrinho.php'>Adiquirir</a> <img src='imagens/carrinho3.png' alt=''></h2>
+        echo "<a class='botao_adquirir' href='carrinho.php'>Comprar</a>
         <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>";
         
-        echo '<script>swal("ITEM ADIQUIRIDO!");</script>';
+        // echo '<script>swal("ITEM ADIQUIRIDO!");</script>';
         ?>
     </main>
     <?php include_once "rodape.php"; ?>

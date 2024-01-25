@@ -3,29 +3,18 @@
 
 :root{
     --cor_fundo_body: #F0F0F0;
-    --cor_link_hover: #8eabb8;
-    --textos_primários: #FFF;
+    --cor_nome_marca: #FFC83E;
+    --cor_link_hover: #5c6874;
+    --cor_textos_primários: #FFF;
     --cor_texto_secundario: #54616C;
-    --fundoNav: #96B6C5;
-    --fundoBanner: #54616C;
-    --cor1:#d9095c;
-    --cor3:#ac09d996;
-    --cor4:#f82b7a;
-    --cor5:#850af7;
-    --cor6:#3891f767;
-    --cor7:#86bbf867;
-    --cor9:#0c68d1d8;
-
-    --fontePrincipal: "Inter", sans-serif;
+    --cor_fundo_nav: #54616C;
+    --cor_fundo_banner: #54616C;
+    --fonte_principal: "Inter", sans-serif;
     --fonte_secundaria: "Poppins", sans-serif;
-
-    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-destaque: 'Bebas Neue', 'cursive';
 }
 
 *{
     margin: 0; padding: 0; box-sizing: 0; border-box: 0;
-    
 }
 
 html{
@@ -33,7 +22,7 @@ html{
 }
 
 .banner{
-    background-color: var(--fundoBanner);
+    background-color: var(--cor_fundo_banner);
     background-image: url(img/fundoheader.svg);
     min-height: 27em;
     background-repeat: no-repeat;
@@ -52,11 +41,11 @@ html{
 }
 
 .banner .frase{
-    color: var(--textos_primários);
-    font-family: var(--fontePrincipal);
+    color: var(--cor_textos_primários);
+    font-family: var(--fonte_secundaria);
     text-align: left;
     font-weight: 600;
-    padding-left: 3%;
+    padding-left: 2%;
     padding-top: 10%;
     margin-bottom: 10em;
     max-width: 13em;
@@ -66,64 +55,61 @@ html{
     margin-top: 1%;
 }
 
-header nav {
+.barra_nav {
     display: flex;
-    gap: 35em;
     align-items: center;
-    background-color: var(--fundoNav);
-    padding: 10px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0, 0.192);
+    background-color: var(--cor_fundo_nav);
+    padding: 0.2em;
     text-align: center;
     font-family: var(--fonte-padrao);
     justify-content: space-between;
-    border-radius: -20px;
 }
 
-nav .nomeMarca{
-    color: var(--textos_primários);
-    font-family: var(--fontePrincipal);
+.barra_nav .nomeMarca{
+    color: var(--cor_nome_marca);
+    font-family: var(--fonte_principal);
     font-weight: 800;
     padding-left: 2%;
     font-size: 4.0rem;
     margin-bottom: 0;
 }
 
-nav .links{
+.barra_nav .links{
     display: flex;
-    gap: 1.5em;
+    gap: 1.2em;
     list-style: none;
     align-items: end;
-    font-size: 2.4rem;
+    font-size: 2.0rem;
     padding-right: 2em;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 400;
 }
 
-nav .link{
-    color: var(--textos_primários);
-    padding: 10px;
+.barra_nav .link{
+    color: var(--cor_textos_primários);
+    padding: 0.4em;
     text-decoration: none;
-    :transition-duration: 0.5s;
-    border: 2px solid transparent;
-    transition: color 0.5s;
 }
 
-span .link_carrinho{
-    border: 2px solid;
-    border-radius: 20px;
-    border-color: var(--textos_primários);
-    border-radius: 20px;
+.link_carrinho_img{
+    width: 16%;
+}
+
+.link_carrinho{
+    border: 0.1em solid;
+    border-radius: 1em;
+    border-width: 0.1em;
+    border-color: var(--cor_textos_primários);
+    margin: auto;
+    padding: 0px;
 }
 
 .link:hover{
-    /* border-color: var(--textos_primários); */
     text-decoration: none;
-    color: var(--textos_primários);
+    color: var(--cor_textos_primários);
     background-color: var(--cor_link_hover);
-    border-radius: 20px;
+    border-radius: 1em;
 }
-
-
 
 body{
     background-color: var(--cor_fundo_body);
@@ -172,10 +158,98 @@ body{
     padding-top: 3%;
 }
 
+/* Página sobre nós */
+
+.sobre_nos{
+    width: 65em;
+    margin: 10% auto;
+    font-family: var(--fonte_principal);
+    font-size: 1.6rem;
+}
+
+.sobre_nos .conteudo{
+    margin-bottom: 5%;
+}
+
+.sobre_nos h1{
+    font-family: var(--fonte_secundaria);
+    font-weight: 600;
+    color: var(--cor_texto_secundario);
+    margin-bottom: 1em;
+}
+
+.curiosidades_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6em;
+}
+
+.conteudo_curiosidades{
+    justify-content: space-between;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.arte{
+    justify-content: space-between;
+}
+
+.arte img {
+    max-width: 100%;
+}
+
+/* página carrinho  */
+
+.carrinho{
+    margin-top: 10em;
+}
+
+.carrinho-item{
+    max-width: 1200px;
+    margin: 2em auto;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #ccc;
+    display: flex;
+    gap: 1em;
+}
+
+.carrinho-item__imagem_produto{
+    width: 2%;
+}
+
+.carrinho-item__descricao{
+    font-size: 16px;
+    color: gray;
+}
+
+.botao_adquirir{
+    width: 15%;
+    text-align:center;
+    box-sizing: border-box;
+    border-radius: 1em;
+    border: 0.2em solid var(--cor_fundo_nav);
+    padding: 0.9em 3em;
+    display: block;
+    text-decoration: none;
+    color: var(--cor_fundo_nav);
+    margin: 2em auto;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.botao_adquirir:hover {
+    background-color: var(--cor_fundo_nav);
+    color: var(--cor_textos_primários);
+    text-decoration: none;
+}
+
+/* rodape */
+
 .roda_pe{
     display: flex;
     background-image: url(img/fundoRodaPe.svg);
-    background-color: var(--fundoBanner);
+    background-color: var(--cor_fundo_banner);
     margin-top: 10em;
     height: 20em;
     justify-content: space-between;
@@ -190,7 +264,6 @@ body{
 
 .roda_pe .icone{
     width: 1em;
-    
 }
 
 .roda_pe .pt-br{
@@ -199,57 +272,3 @@ body{
 }
 
 
-.carrinho-item{
-    max-width: 1200px;
-    margin: 10px auto;
-    padding-bottom: 10px;
-
-    border-bottom: 2px dotted #ccc;
-}
-.carrinho-item p{
-    font-size: 16px;
-    color: gray;
-}
-
-.curiosidades{
-    background-color: var(--cor3);
-    min-width: 300px;
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 100px;
-    font-family: var(--fonte-destaque);
-    font-size: large;
-}
-.title{
-    background-image: linear-gradient(to right, #e63079, #2380ebd8);
-    width:20%;
-    padding:10px;
-    text-align:center;
-    color:white;
-    border-radius: 5px;
-}
-h2.title a{
-    text-decoration: none;
-    color:white;
-}
-.title3{
-    background-color:var(--cor9);
-    width:20%;
-    padding:10px;
-    text-align:center;
-    color:white;
-    border-radius: 5px;
-}
-h2.title3 a{
-    text-decoration: none;
-    color:white;
-}
-h2.title2{
-    background-image: linear-gradient(to right, #e63079, #2380ebd8);
-    width:100%;
-    padding:10px;
-    text-align:center;
-    color:white;
-}
