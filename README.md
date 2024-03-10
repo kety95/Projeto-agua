@@ -1,6 +1,6 @@
 # Olá, bem vindo ao meu projeto de portifólio.
 
-![image](images/pagina.png)
+![image](imagens/pagina.png)
 
 ## Tools used:
 
