@@ -2,7 +2,7 @@
 
 ![image](imagens/pagina.png)
 
-## Tools used:
+## Ferramentas utilizadas:
 
 * HTML
 
